@@ -4,8 +4,8 @@ Library     Collections
 
 *** Variable ***
 ${HOST}         https://api.petfinder.com/v2/animals
-${APP_KEY}      vhK0ycQCrHVtY09bmoHHfXX1KRpgbAhrCB7gl26YTWHQ8vku4F
-${APP_SECRET}   IPo7Gh0KFNfodF6uankARwidpEi4m23qKNh0eeLi
+${APP_KEY}      
+${APP_SECRET}   
 ${url}         https://api.petfinder.com/v2/animals
 
 *** Keywords ***
@@ -16,7 +16,7 @@ Conecta ao WebService
 Realiza a requisição do ID  
     [Arguments]         ${ID_DESEJADO}
     Create Session    petfinder  https://api.petfinder.com/v2/animals
-    ${headers}=    Create Dictionary  Content-Type=application/json  Authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ2aEsweWNRQ3JIVnRZMDlibW9ISGZYWDFLUnBnYkFockNCN2dsMjZZVFdIUTh2a3U0RiIsImp0aSI6Ijg4Njc5YjMzOGRkYWQ1MzE1ZjkxMmM4ZDdjMmRhN2VhNTYwODZiYjMyMDMwNjZjMTgzMjEyMTIyODEwOWFhYTA0ZDlkNjExOWZmZWIzYmY1IiwiaWF0IjoxNjQ5NzczMjU2LCJuYmYiOjE2NDk3NzMyNTYsImV4cCI6MTY0OTc3Njg1Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.kABywcfLAMXlmx2RjuqAT_xPNZoW82j0aYz1ggaEyxltMLU_Nsdo76YMJ0L9y6zIIzTzPqMc8g704OljzHy63zRyW9thmlXFKFHu2_dO1EvgQH4jukzXA4xcB2KVatB4lUzTkxGG8Bf82T0MXmXFPwP073yYDNDShvcoJPyV5oL5hVtuwdza7tV19nVI-LlMOfF-Dj0NpCqgfr64pvuYOpgg-n8-pbpv1p2VS8kg0MEUUDSyC1wGidt3o4S2rIFNcswS0Y9QElXlgFPNaFoFlZ7VxVefD7CvF_6ovyFikszhV1U2iP9qmLf7m-wQR2xrbHq8pSziAE1HUgl76g9fpQ
+    ${headers}=    Create Dictionary  Content-Type=application/json  Authorization=Bearer 
     ${RESPOSTA}=   GET On Session  petfinder  /${ID_DESEJADO}  headers=${headers}  expected_status=200
     Set Test Variable   ${RESPOSTA}
 
